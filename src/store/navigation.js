@@ -2,7 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   open: false,
-  payment: false,
+  payment: {
+    isOpen: false,
+    title: "",
+  },
   account: false,
 };
 
@@ -14,7 +17,10 @@ const navigationSlice = createSlice({
       state.open = action.payload;
     },
     onPayment(state, action) {
-      state.payment = action.payload;
+      state.payment = {
+        isOpen: action.payload.isOpen,
+        title: action.payload.title,
+      };
     },
     onAccount(state, action) {
       state.account = action.payload;
