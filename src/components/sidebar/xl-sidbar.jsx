@@ -60,7 +60,7 @@ const XlSidbar = () => {
           </Link>
           {mouse && (
             <div className="">
-              <Link to={"/lend"}>
+              <Link to={""}>
                 <NavLink
                   name={"Lend"}
                   Icons={LendIcon}
