@@ -4,6 +4,7 @@ import {
   BtcIcon,
   DashboardIcon,
   LendIcon,
+  ModalCancel,
   SynAass,
   SynBridge,
   SynMerge,
@@ -17,6 +18,7 @@ import { Link } from "react-router-dom";
 import NavLink from "./nav-link";
 import { useState } from "react";
 import {
+  Box,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -48,14 +50,23 @@ const SmallSidebar = () => {
 
   return (
     <Drawer isOpen={isOpen} placement="left" onClose={onClose} size={"xs"}>
-      <div className=" lg:hidden">
+      <div className=" lg:hidden relative">
         <DrawerOverlay />
       </div>
       <DrawerContent
         // className={"bg-[#101115]"}
         bgColor={{ base: "#191A1F", lg: "#101115" }}
         borderRight={"1px #191A1F solid"}
+        position={"relative"}
       >
+        <Box
+          position={"absolute"}
+          top={"35px"}
+          right={"-30px"}
+          onClick={onClose}
+        >
+          <ModalCancel />
+        </Box>
         <DrawerBody paddingX={"0px"}>
           <div className="flex mx-4 my-5 items-center">
             <span className=" hidden lg:block">
