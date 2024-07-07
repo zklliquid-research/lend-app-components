@@ -2,10 +2,13 @@ import { useState } from "react";
 import Button from "../../widget/Button";
 import Collateral from "./collateral";
 import Credit from "./credit";
-import CreditModal from "./credit-modal";
+// import CreditModal from "./credit-modal";
+import PaymentModal from "./payment-modal";
+import { useSelector } from "react-redux";
 
 const MyLoans = () => {
   const [toggle, setToggle] = useState(1);
+  const paymentObj = useSelector((state) => state.navigate.payment);
   const toggleHandler = (id) => {
     setToggle(id);
     console.log(id);
@@ -50,7 +53,7 @@ const MyLoans = () => {
           <Credit />
         </div>
       </div>
-      <CreditModal />
+      <PaymentModal title={paymentObj.title} />
     </div>
   );
 };
