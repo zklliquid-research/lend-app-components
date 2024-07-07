@@ -8,9 +8,11 @@ import { navigationActions } from "../../store/navigation";
 const Collateral = () => {
   const dispatch = useDispatch();
 
-  const openPaymentModal = () => {
-    dispatch(navigationActions.onPayment(true));
-    console.log("test");
+  const openDepositPaymentModal = () => {
+    dispatch(navigationActions.onPayment({ title: "Deposit", isOpen: true }));
+  };
+  const openWithdrawPaymentModal = () => {
+    dispatch(navigationActions.onPayment({ title: "Withdraw", isOpen: true }));
   };
   return (
     <>
@@ -51,7 +53,7 @@ const Collateral = () => {
         </div>
         <div className="hidden lg:flex justify-end gap-2">
           <Button
-            onClick={openPaymentModal}
+            onClick={openDepositPaymentModal}
             className={
               " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
             }
@@ -62,6 +64,7 @@ const Collateral = () => {
             className={
               " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
             }
+            onClick={openWithdrawPaymentModal}
           >
             <Deposit />
             Withdraw
@@ -70,7 +73,7 @@ const Collateral = () => {
       </Card>
       <div className="flex lg:hidden justify-center gap-5 mt-[5rem]">
         <button
-          onClick={openPaymentModal}
+          onClick={openDepositPaymentModal}
           className={
             " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
           }
@@ -78,6 +81,7 @@ const Collateral = () => {
           <Deposit /> Deposit
         </button>
         <button
+          onClick={openWithdrawPaymentModal}
           className={
             " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
           }

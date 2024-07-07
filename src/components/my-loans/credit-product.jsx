@@ -1,9 +1,18 @@
+import { useDispatch } from "react-redux";
 import { PercentageSquare, Repay } from "../../icon-component/Icons";
 import Button from "../../widget/Button";
 import Card from "../../widget/Card";
 import CreditTable from "./credit-table";
+import { navigationActions } from "../../store/navigation";
 
 const CreditProduct = () => {
+  const dispatch = useDispatch();
+  const openBorrowPaymentModal = () => {
+    dispatch(navigationActions.onPayment({ title: "Borrow", isOpen: true }));
+  };
+  const openRepayPaymentModal = () => {
+    dispatch(navigationActions.onPayment({ title: "Repay", isOpen: true }));
+  };
   return (
     <>
       <Card className={"flex flex-col min-h-[58vh]"}>
@@ -96,6 +105,7 @@ const CreditProduct = () => {
         </div>
         <div className=" hidden lg:flex justify-end gap-2">
           <Button
+            onClick={openBorrowPaymentModal}
             className={
               " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
             }
@@ -103,6 +113,7 @@ const CreditProduct = () => {
             <PercentageSquare /> Borrow
           </Button>
           <Button
+            onClick={openRepayPaymentModal}
             className={
               " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
             }
@@ -114,13 +125,15 @@ const CreditProduct = () => {
       </Card>
       <div className="flex lg:hidden justify-center gap-5 mt-[5rem]">
         <button
+          onClick={openBorrowPaymentModal}
           className={
             " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
           }
         >
-          <PercentageSquare /> Burrow
+          <PercentageSquare /> Borrow
         </button>
         <button
+          onClick={openRepayPaymentModal}
           className={
             " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
           }
