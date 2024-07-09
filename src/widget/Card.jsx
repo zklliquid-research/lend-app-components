@@ -1,9 +1,12 @@
-const Card = ({ children, className, res }) => {
+import classNames from "classnames";
+
+const Card = ({ children, className: additionalClasses, rest }) => {
+  const classes = classNames(
+    "bg-[#191A1F] rounded-md p-[0.85rem]",
+    additionalClasses
+  );
   return (
-    <div
-      {...res}
-      className={`bg-[#191A1F] rounded-md p-[0.85rem] ${className}`}
-    >
+    <div {...rest} className={classes}>
       {children}
     </div>
   );

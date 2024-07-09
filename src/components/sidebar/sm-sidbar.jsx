@@ -100,14 +100,14 @@ const SmallSidebar = () => {
               onMouseLeave={mouseLeaveFunction}
               className={`${mouse ? "bg-[#1A1C22]" : ""}`}
             >
-              <Link to={""}>
+              <div>
                 <NavLink
                   name={"SynLand"}
                   ready={"ready"}
                   Arrow={mouse ? ArrowUp : ArrowDown}
                   Icons={BtcIcon}
                 />
-              </Link>
+              </div>
               {mouse && (
                 <div>
                   <Link to={"/lend"}>

@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import RootLayout from "./pages/root-layout";
-import Lend from "./pages/lend";
 import MyLoansPage from "./pages/my-loans";
+import LendPage from "./pages/lend";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,8 +10,14 @@ function App() {
       path: "/",
       element: <RootLayout />,
       children: [
-        { index: true, element: <Lend /> },
-        { path: "/my-loans", element: <MyLoansPage /> },
+        {
+          index: true,
+          element: (
+            <p className=" text-yellow-50 text-[1rem] text-center">Dashboard</p>
+          ),
+        },
+        { path: "lend", element: <LendPage /> },
+        { path: "my-loans", element: <MyLoansPage /> },
       ],
     },
   ]);

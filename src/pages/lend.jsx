@@ -1,5 +1,7 @@
-const Lend = () => {
-  return <h1 className=" text-yellow-50">Lend</h1>;
+import Lend from "../components/lend/lend";
+
+const LendPage = () => {
+  return <Lend />;
 };
 
-export default Lend;
+export default LendPage;

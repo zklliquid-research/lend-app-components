@@ -33,7 +33,7 @@ const XlSidbar = () => {
           Syntrum
         </p>
       </div>
-      <ul className=" mt-[1.5rem]">
+      <ul className=" mt-[1.5rem] flex flex-col gap-4">
         <li>
           <Link to={""} className={""}>
             <NavLink
@@ -49,7 +49,7 @@ const XlSidbar = () => {
           onMouseLeave={mouseLeaveFunction}
           className={`${mouse ? "bg-[#1A1C22]" : ""}`}
         >
-          <Link to={""} className={""}>
+          <div>
             <NavLink
               name={"SynLand"}
               ready={"ready"}
@@ -57,10 +57,10 @@ const XlSidbar = () => {
               Icons={BtcIcon}
               className={"hidden xl:block"}
             />
-          </Link>
+          </div>
           {mouse && (
             <div className="">
-              <Link to={""}>
+              <Link to={"/lend"}>
                 <NavLink
                   name={"Lend"}
                   Icons={LendIcon}

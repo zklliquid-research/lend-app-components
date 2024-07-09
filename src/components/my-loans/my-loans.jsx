@@ -11,14 +11,13 @@ const MyLoans = () => {
   const paymentObj = useSelector((state) => state.navigate.payment);
   const toggleHandler = (id) => {
     setToggle(id);
-    console.log(id);
   };
   return (
     <div>
       <h2 className=" font-Inter font-[700] text-[#FFF] text-[1.875rem]">
         My Loans
       </h2>
-      <div className=" py-3 flex flex-col gap-10 lg:flex-row lg:gap-2 xl:gap-6">
+      <div className=" py-3 flex flex-col gap-10 lg:flex-row lg:gap-2 xl:gap-6 xl:mt-3">
         <div className=" flex gap-4 justify-center lg:hidden mt-[1rem]">
           <Button
             className={` px-6 py-[8px] ${
