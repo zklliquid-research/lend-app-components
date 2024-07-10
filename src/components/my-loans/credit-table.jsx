@@ -5,14 +5,22 @@ const CreditTable = () => {
     <div className="overflow-x-auto">
       {/* Larger screens */}
       <div className="hidden lg:block">
-        <table>
+        <table className=" min-w-full table-auto">
           <thead>
-            <tr className="grid grid-cols-5 text-[#6D7A86] gap-5 font-Inter text-[14px] font-[500]">
-              <th className="col-span-1 text-left px-4 py-2">Asset</th>
-              <th className="col-span-1 text-left px-4 py-2">Quantity</th>
-              <th className="col-span-1 text-left px-4 py-2">APR</th>
-              <th className="col-span-1 text-left px-4 py-2">Fees</th>
-              <th className="col-span-1 text-left px-4 py-2 whitespace-nowrap">
+            <tr className="flex text-[#6D7A86] gap-5 font-Inter text-[14px] font-[500]">
+              <th className="flex-1 whitespace-nowrap text-left px-4 py-2">
+                Asset
+              </th>
+              <th className="flex-1 whitespace-nowrap text-center px-4 py-2">
+                Quantity
+              </th>
+              <th className="flex-1 whitespace-nowrap text-center px-4 py-2">
+                APR
+              </th>
+              <th className="flex-1 whitespace-nowrap text-center px-4 py-2">
+                Fees
+              </th>
+              <th className="flex-1 whitespace-nowrap text-right px-4 py-2">
                 In Wallet
               </th>
             </tr>
@@ -23,23 +31,23 @@ const CreditTable = () => {
                 data.quantity
               );
               return (
-                <tr className="grid grid-cols-5 mt-4 gap-5" key={index}>
-                  <td className="col-span-1 flex items-center gap-2 px-4 py-2">
+                <tr className="flex mt-4" key={index}>
+                  <td className="flex-1 whitespace-nowrap text-left flex items-center gap-2 px-4 py-2">
                     <data.coin />
                     <span className="text-[#FFF] font-Inter text-[14px] font-[600]">
                       {data.title}
                     </span>
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 whitespace-nowrap text-center text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
                     {formattedQuantity}
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 whitespace-nowrap text-center text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
                     {data.apr} %
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 whitespace-nowrap text-center text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
                     {data.fees}
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 whitespace-nowrap text-right text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
                     {data.wallet}
                   </td>
                 </tr>
