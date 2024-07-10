@@ -5,7 +5,6 @@ import {
   Syt,
   SytSmall,
   Tsmall,
-  UsdcSmall,
   Usdt,
 } from "../icon-component/Icons";
 
