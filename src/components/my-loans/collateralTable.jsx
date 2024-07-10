@@ -1,4 +1,3 @@
-// import { Bitcoins } from "../../icon-component/Icons";
 import { DUMMYDATA } from "../../lib/dummyDb";
 
 const CollateralTable = () => {
@@ -6,13 +5,21 @@ const CollateralTable = () => {
     <div className="overflow-x-auto">
       {/* Larger screens */}
       <div className="hidden lg:block">
-        <table className="w-full table-auto">
+        <table className=" min-h-[50vh] min-w-full table-auto">
           <thead className="">
-            <tr className="grid grid-cols-4 text-[#6D7A86] font-Inter text-[14px] font-[500]">
-              <th className="col-span-1 text-left px-4 py-2">Asset</th>
-              <th className="col-span-1 text-left px-4 py-2">Collateral</th>
-              <th className="col-span-1 text-left px-4 py-2">LTV</th>
-              <th className="col-span-1 text-left px-4 py-2">In Wallet</th>
+            <tr className="flex text-[#6D7A86] font-Inter text-[14px] font-[500]">
+              <th className="flex-1 text-left px-4 py-2 tracking-wider">
+                Asset
+              </th>
+              <th className="flex-1 text-center px-4 py-2 tracking-wider">
+                Collateral
+              </th>
+              <th className="flex-1 text-center px-4 py-2 tracking-wider">
+                LTV
+              </th>
+              <th className="flex-1 text-right whitespace-nowrap px-4 py-2 tracking-wider">
+                In Wallet
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -24,22 +31,22 @@ const CollateralTable = () => {
                 data.wallet
               );
               return (
-                <tr className="grid grid-cols-4 mt-4" key={index}>
-                  <td className="col-span-1 flex items-center gap-2 px-4 py-2">
+                <tr className="flex mt-4" key={index}>
+                  <td className="flex-1 whitespace-nowrap flex items-center gap-2 px-4 py-2">
                     <data.coin />
                     <span className="text-[#FFF] font-Inter text-[14px] font-[600]">
                       {data.title}
                     </span>
                   </td>
                   <td
-                    className={`col-span-1 ${
+                    className={`flex-1 whitespace-nowrap text-center ${
                       data.collateral <= 0 ? "text-[#6D7A86]" : "text-[#FFF]"
                     } font-Inter text-[14px] font-[600] px-4 py-2`}
                   >
                     {data.collateral}
                   </td>
                   <td
-                    className={`col-span-1 ${
+                    className={`flex-1 whitespace-nowrap text-center ${
                       data.ltv <= 0 ? "text-[#6D7A86]" : "text-[#FFF]"
                     } font-Inter text-[14px] font-[600] px-4 py-2`}
                   >
@@ -47,7 +54,7 @@ const CollateralTable = () => {
                     {formattedLtv}
                   </td>
                   <td
-                    className={`col-span-1 ${
+                    className={`flex-1 whitespace-nowrap text-right ${
                       data.wallet <= 0 ? "text-[#6D7A86]" : "text-[#FFF]"
                     } font-Inter text-[14px] font-[600] px-4 py-2`}
                   >
