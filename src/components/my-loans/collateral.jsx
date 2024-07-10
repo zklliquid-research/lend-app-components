@@ -16,7 +16,7 @@ const Collateral = () => {
   };
   return (
     <>
-      <Card className=" flex flex-col min-h-[78vh]">
+      <Card className=" flex flex-col min-h-[68vh]">
         <div className=" flex-1">
           <div className=" flex justify-between">
             <p className=" font-Inter text-[#FFF] font-[600] text-[1rem]">
