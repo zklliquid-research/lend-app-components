@@ -2,20 +2,26 @@ import { STABLECOIN } from "../../lib/dummyDb";
 
 const StableCoinTable = () => {
   return (
-    <div className="overflow-x-auto mt-3">
+    <div className="overflow-x-auto mt-3 lg:mt-[-1.3rem]">
       {/* Larger screens */}
       <div className="hidden lg:block">
-        <table className=" w-full">
+        <table className=" min-w-full table-auto">
           <thead>
-            <tr className="grid grid-cols-5 text-[#6D7A86] gap-5 py-2 font-Inter text-[14px] font-[500] border-y border-[#212228]">
-              <th className="col-span-1 text-left px-4 py-2">Asset</th>
-              <th className="col-span-1 text-left px-4 py-2">APY</th>
-              <th className="col-span-1 text-left px-4 py-2">USD VALUE</th>
+            <tr className="flex text-[#6D7A86] py-2 font-Inter text-[14px] font-[500] border-y border-[#212228]">
+              <th className="flex-1 px-2 text-left whitespace-nowrap py-2 tracking-wider">
+                Asset
+              </th>
+              <th className="flex-1 px-2 text-center whitespace-nowrap py-2 tracking-wider">
+                APY
+              </th>
+              <th className="flex-1 px-2 text-center whitespace-nowrap py-2 tracking-wider">
+                USD VALUE
+              </th>
 
-              <th className="col-span-1 text-left px-4 py-2 whitespace-nowrap">
+              <th className="flex-1 px-2 text-center py-2 tracking-wider whitespace-nowrap">
                 In Wallet
               </th>
-              <th className="col-span-1 text-left px-4 py-2 whitespace-nowrap">
+              <th className="flex-1 px-2 text-right py-2 tracking-wider whitespace-nowrap">
                 Interest
               </th>
             </tr>
@@ -29,26 +35,23 @@ const StableCoinTable = () => {
                 data.inwallet
               );
               return (
-                <tr
-                  className="grid grid-cols-5 mt-4 gap-5  border-b border-[#212228]"
-                  key={index}
-                >
-                  <td className="col-span-1 flex items-center gap-2 px-4 py-2">
+                <tr className="flex mt-4 border-b border-[#212228]" key={index}>
+                  <td className="flex-1 text-left whitespace-nowrap flex items-center gap-2 py-2">
                     <data.coin />
                     <span className="text-[#FFF] font-Inter text-[14px] font-[600]">
                       {data.title}
                     </span>
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 text-center whitespace-nowrap text-[#FFF] font-Inter text-[14px] font-[600] py-2">
                     {data.apy} %
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 text-center whitespace-nowrap text-[#FFF] font-Inter text-[14px] font-[600] py-2">
                     {formattedUsdValue}
                   </td>
-                  <td className="col-span-1 text-[#FFF] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 text-center whitespace-nowrap text-[#FFF] font-Inter text-[14px] font-[600] py-2">
                     {formattedInwallet}
                   </td>
-                  <td className="col-span-1 text-[#34D399] font-Inter text-[14px] font-[600] px-4 py-2">
+                  <td className="flex-1 text-right whitespace-nowrap text-[#34D399] font-Inter text-[14px] font-[600] py-2">
                     {data.interest}
                   </td>
                 </tr>
