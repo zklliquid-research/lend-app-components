@@ -15,7 +15,7 @@ const CreditProduct = () => {
   };
   return (
     <>
-      <Card className={"flex flex-col min-h-[58vh]"}>
+      <Card className={"flex flex-col min-h-[53vh] mt-4"}>
         <div className=" flex-1">
           <div className=" flex justify-between">
             <p className=" font-Inter text-[#FFF] font-[600] text-[1rem]">
