@@ -15,7 +15,7 @@ const CreditProduct = () => {
   };
   return (
     <>
-      <Card className={"flex flex-col min-h-[53vh] mt-4"}>
+      <Card className={"flex flex-col min-h-[55.3vh] mt-4"}>
         <div className=" flex-1">
           <div className=" flex justify-between">
             <p className=" font-Inter text-[#FFF] font-[600] text-[1rem]">
@@ -107,7 +107,7 @@ const CreditProduct = () => {
           <Button
             onClick={openBorrowPaymentModal}
             className={
-              " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
+              " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] px-[24px] py-[12px] flex gap-2"
             }
           >
             <PercentageSquare /> Borrow
@@ -115,7 +115,7 @@ const CreditProduct = () => {
           <Button
             onClick={openRepayPaymentModal}
             className={
-              " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
+              " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] px-[24px] py-[12px] flex gap-2"
             }
           >
             <Repay />
@@ -127,7 +127,7 @@ const CreditProduct = () => {
         <button
           onClick={openBorrowPaymentModal}
           className={
-            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
+            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[12px] px-[24px] w-[100%] rounded-md"
           }
         >
           <PercentageSquare /> Borrow
@@ -135,7 +135,7 @@ const CreditProduct = () => {
         <button
           onClick={openRepayPaymentModal}
           className={
-            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
+            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[12px] px-[24px] w-[100%] rounded-md"
           }
         >
           <Repay />
