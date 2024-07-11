@@ -51,31 +51,31 @@ const StableCoin = () => {
         </div>
 
         <div className=" hidden lg:flex gap-4 justify-end">
-          <Button className={" bg-[#292B33] px-[24px] py-[10px] text-[14px]"}>
+          <Button className={" bg-[#292B33] px-[24px] py-[12px] text-[14px]"}>
             Compound
           </Button>
-          <Button className={" bg-[#292B33] px-[24px] py-[10px] text-[14px]"}>
+          <Button className={" bg-[#292B33] px-[24px] py-[12px] text-[14px]"}>
             Claim
           </Button>
-          <Button className={" bg-[#1F3E85] px-[24px] py-[10px] text-[14px]"}>
+          <Button className={" bg-[#1F3E85] px-[24px] py-[12px] text-[14px]"}>
             Deposit
           </Button>
-          <Button className={" bg-[#1F3E85] px-[24px] py-[10px] text-[14px]"}>
+          <Button className={" bg-[#1F3E85] px-[24px] py-[12px] text-[14px]"}>
             Withdraw
           </Button>
         </div>
       </Card>
       <div className=" lg:hidden grid grid-cols-2 gap-5 mt-6">
-        <Button className={" bg-[#1F3E85] px-[24px] py-[10px] text-[14px]"}>
+        <Button className={" bg-[#1F3E85] px-[24px] py-[12px] text-[14px]"}>
           Deposit
         </Button>
-        <Button className={" bg-[#1F3E85] px-[24px] py-[10px] text-[14px]"}>
+        <Button className={" bg-[#1F3E85] px-[24px] py-[12px] text-[14px]"}>
           Withdraw
         </Button>
-        <Button className={" bg-[#292B33] px-[24px] py-[10px] text-[14px]"}>
+        <Button className={" bg-[#292B33] px-[24px] py-[12px] text-[14px]"}>
           Compound
         </Button>
-        <Button className={" bg-[#292B33] px-[24px] py-[10px] text-[14px]"}>
+        <Button className={" bg-[#292B33] px-[24px] py-[12px] text-[14px]"}>
           Claim
         </Button>
       </div>
