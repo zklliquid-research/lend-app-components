@@ -44,7 +44,9 @@ const Lend = () => {
           <StableCoin />
         </div>
         <div
-          className={`${toggle === 2 ? "block" : "hidden"} lg:block lg:w-[26%]`}
+          className={`${
+            toggle === 2 ? "block" : "hidden"
+          } lg:block lg:w-[24.7%]`}
         >
           <BonusReward />
         </div>
