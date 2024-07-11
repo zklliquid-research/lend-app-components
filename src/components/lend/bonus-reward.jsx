@@ -53,7 +53,7 @@ const BonusReward = () => {
         </div>
         <div className=" hidden lg:flex flex-col">
           <Button
-            className={" bg-[#1F3E85] px-[24px] py-[10px] text-[14px] w-full"}
+            className={" bg-[#1F3E85] px-[24px] py-[12px] text-[14px] w-full"}
           >
             Claim bonus
           </Button>
@@ -61,7 +61,7 @@ const BonusReward = () => {
       </Card>
       <div className=" flex lg:hidden flex-col mt-8">
         <Button
-          className={" bg-[#1F3E85] px-[24px] py-[10px] text-[14px] w-full"}
+          className={" bg-[#1F3E85] px-[24px] py-[12px] text-[14px] w-full"}
         >
           Claim bonus
         </Button>
