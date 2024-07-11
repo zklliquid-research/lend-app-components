@@ -16,7 +16,7 @@ const Collateral = () => {
   };
   return (
     <>
-      <Card className=" flex flex-col min-h-[68vh]">
+      <Card className=" flex flex-col min-h-[70.3vh]">
         <div className=" flex-1">
           <div className=" flex justify-between">
             <p className=" font-Inter text-[#FFF] font-[600] text-[1rem]">
@@ -55,14 +55,14 @@ const Collateral = () => {
           <Button
             onClick={openDepositPaymentModal}
             className={
-              " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
+              " bg-[#1F3E85] text-[#FFF] px-[24px] py-[12px] font-Inter text-[14px] flex gap-2"
             }
           >
             <Deposit /> Deposit
           </Button>
           <Button
             className={
-              " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2"
+              " bg-[#1F3E85] text-[#FFF] px-[24px] py-[12px] font-Inter text-[14px] flex gap-2"
             }
             onClick={openWithdrawPaymentModal}
           >
@@ -75,7 +75,7 @@ const Collateral = () => {
         <button
           onClick={openDepositPaymentModal}
           className={
-            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
+            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[12px] px-[24px] w-[100%] rounded-md"
           }
         >
           <Deposit /> Deposit
@@ -83,7 +83,7 @@ const Collateral = () => {
         <button
           onClick={openWithdrawPaymentModal}
           className={
-            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[16px] px-[24px] w-[100%] rounded-md"
+            " bg-[#1F3E85] text-[#FFF] font-Inter text-[14px] flex gap-2 justify-center py-[12px] px-[24px] w-[100%] rounded-md"
           }
         >
           <Deposit />
